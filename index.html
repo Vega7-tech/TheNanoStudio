@@ -1,0 +1,328 @@
+vega7-tech.github.io<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"> <!-- Standard character encoding -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Mobile responsiveness -->
+    <title>Direct Consultation | Strategic Project Management</title> <!-- Tab title -->
+    <style>
+        html { scroll-behavior: smooth; } /* Enables smooth scrolling for navigation links */
+
+        :root {
+            --bg-dark: #05070a; /* Primary background: Deep navy-black base */
+            --bg-card: #0c121d; /* Card background: Deep navy-saturated dark tone */
+            --brand-brown: #2d1b14; /* Brand Walnut: Rich brown from wood branding assets */
+            --brand-gold: #c5a059; /* Branding primary: Warm Metallic Gold from logo */
+            --brand-blue: #004ea8; /* Branding secondary: Vibrant Royal Blue from logo assets */
+            --text-primary: #f8fafc; /* Primary text: Crisp silver-white for contrast */
+            --text-muted: #7ea3cc; /* Muted text: Blue-tinted white for hierarchy */
+            --accent-blue: #3b82f6; /* Functional accent: Lighter blue */
+            --glow: 0 0 25px rgba(197, 160, 89, 0.3); /* Golden radiance for elevation */
+            
+            /* Shield Pattern: Inline SVG recreating the brand motif */
+            --shield-pattern: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'%3E%3Cpath d='M50 10 L80 20 L80 50 C80 70 50 90 50 90 C50 90 20 70 20 50 L20 20 L50 10 Z' fill='none' stroke='%23c5a059' stroke-width='1' stroke-opacity='0.1'/%3E%3Cpath d='M50 25 L65 30 L65 45 C65 55 50 65 50 65 C50 65 35 55 35 45 L35 30 L50 25 Z' fill='none' stroke='%23c5a059' stroke-width='0.5' stroke-opacity='0.05'/%3E%3C/svg%3E");
+        }
+
+        body {
+            font-family: 'Inter', 'Segoe UI', system-ui, sans-serif; /* Professional typography */
+            color: var(--text-primary); /* Sets global text color */
+            background-color: var(--bg-dark); /* Sets page background */
+            margin: 0; /* Clears margins */
+            line-height: 1.6; /* Sets readable spacing */
+        }
+
+        header {
+            padding: 100px 20px; /* Internal spacing */
+            text-align: center; /* Centers assets */
+            background: radial-gradient(circle at center, #0e1a2b 0%, var(--bg-dark) 100%); /* Depth gradient */
+            position: relative; /* Positioning context */
+        }
+
+        .main-video {
+            width: 100%; /* Responsive width */
+            max-width: 700px; /* Caps visual size */
+            height: auto; /* Aspect ratio safety */
+            margin-bottom: 30px; /* Bottom spacing */
+            border-radius: 15px; /* Rounded corners */
+            box-shadow: 0 0 35px rgba(0, 78, 168, 0.25); /* Brand blue glow */
+        }
+
+        .subtitle {
+            font-size: 1.2rem; /* Subtitle scale */
+            color: var(--text-muted); /* hierarchy color */
+            max-width: 600px; /* Readability constraint */
+            margin: 0 auto 40px auto; /* Centering */
+        }
+
+        .action-container {
+            display: flex; /* Button alignment */
+            justify-content: center; /* Centering */
+            gap: 20px; /* Spacing */
+        }
+
+        .btn {
+            text-decoration: none; /* Link clearing */
+            padding: 14px 30px; /* Hit area */
+            border-radius: 8px; /* Rounding */
+            font-weight: 600; /* Boldness */
+            transition: 0.4s cubic-bezier(0.4, 0, 0.2, 1); /* Professional animation */
+            display: inline-block; /* Layout behavior */
+        }
+
+        .btn-primary {
+            background-color: var(--brand-gold); /* Brand primary color */
+            color: #05070a; /* Dark text contrast */
+            box-shadow: var(--glow); /* Depth shadow */
+        }
+
+        .btn-outline {
+            border: 1px solid var(--brand-gold); /* Framing */
+            color: var(--brand-gold); /* Text color */
+            background: rgba(197, 160, 89, 0.05); /* Tint */
+        }
+
+        .btn:hover {
+            transform: translateY(-3px); /* Hover feedback */
+            filter: brightness(1.15); /* Lightening */
+            box-shadow: 0 10px 25px rgba(197, 160, 89, 0.4); /* Glow intensification */
+        }
+
+        .services-section {
+            padding: 80px 20px; /* Section spacing */
+            max-width: 1100px; /* Layout constraint */
+            margin: 0 auto; /* Centering */
+            position: relative; /* Layering */
+        }
+
+        h2 {
+            text-align: center; /* Center-aligned titles */
+            font-size: 2rem; /* Title scale */
+            margin-bottom: 50px; /* Spacing below title */
+            color: var(--brand-gold); /* Brand gold */
+            text-transform: uppercase; /* Formal caps */
+            letter-spacing: 3px; /* Professional tracking */
+            text-shadow: 0 2px 4px rgba(0,0,0,0.5); /* Visibility protection */
+        }
+
+        .service-grid {
+            display: grid; /* Grid engine */
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Responsiveness */
+            gap: 30px; /* Gutters */
+        }
+
+        .card {
+            background: var(--bg-card); /* Navy-dark cards */
+            padding: 40px; /* Padding */
+            border-radius: 12px; /* Rounding */
+            border: 1px solid #1a2b45; /* Structural boundary */
+            transition: 0.3s; /* Transition speed */
+            display: flex; /* Internal layout */
+            flex-direction: column; /* Stacking */
+        }
+
+        .card:hover {
+            border-color: var(--brand-gold); /* Hover gold boundary */
+            background: #101929; /* Hover navy saturation */
+            box-shadow: 0 10px 30px -10px rgba(0,0,0,0.8); /* Depth shadow */
+        }
+
+        .card h3 {
+            color: white; /* Header visibility */
+            margin-bottom: 15px; /* Spacing */
+        }
+
+        .card p {
+            color: var(--text-muted); /* Muted description */
+            font-size: 0.95rem; /* Standard scale */
+            flex-grow: 1; /* Aligns buttons */
+        }
+
+        .card-actions {
+            margin-top: 20px; /* Action gutter */
+            display: flex; /* Layout */
+            flex-direction: column; /* Vertical actions */
+            gap: 12px; /* Action gutters */
+        }
+
+        .card-btn {
+            color: var(--brand-gold); /* Gold links */
+            text-decoration: none; /* clearing */
+            font-weight: bold; /* Boldness */
+            font-size: 0.9rem; /* Link scale */
+            transition: 0.2s; /* Speed */
+        }
+
+        .card-btn:hover {
+            filter: brightness(1.2); /* Hover brightening */
+        }
+
+        .btn-call {
+            background-color: var(--brand-blue); /* Royal Blue for calls */
+            color: white; /* Visibility */
+            padding: 10px 20px; /* hit area */
+            border-radius: 6px; /* rounding */
+            text-align: center; /* alignment */
+            font-size: 0.85rem; /* scale */
+            text-decoration: none; /* decoration clearing */
+            font-weight: 600; /* Medium-bold */
+            transition: 0.2s; /* speed */
+        }
+
+        .btn-call:hover {
+            background-color: #0056b3; /* Hover shift */
+        }
+
+        .approach-section {
+            /* Hybrid background: Brown Overlay + Pattern SVG + Wood Backdrop */
+            background: 
+                linear-gradient(rgba(45, 27, 20, 0.92), rgba(45, 27, 20, 0.92)), 
+                var(--shield-pattern), 
+                url('assets/wood-pattern.png');
+            background-size: auto, 300px, cover; /* Motif scaling */
+            background-attachment: scroll, scroll, fixed; /* Parallax effect */
+            padding: 100px 20px; /* vertical section separation */
+            text-align: center; /* Content alignment */
+            border-top: 1px solid var(--brand-gold); /* boundary separator */
+            border-bottom: 1px solid var(--brand-gold); /* boundary separator */
+        }
+
+        .methodology-content {
+            max-width: 800px; /* Professional copy constraint */
+            margin: 0 auto; /* Horizontal centering */
+        }
+
+        .proposal-visual {
+            width: 100%; /* Responsive scaling */
+            max-width: 500px; /* Limit */
+            border-radius: 12px; /* Corner style */
+            margin-top: 50px; /* top spacing */
+            box-shadow: 0 25px 50px rgba(0,0,0,0.8); /* Depth shadow */
+            border: 1px solid rgba(197, 160, 89, 0.2); /* rim framing */
+        }
+
+        footer {
+            padding: 80px 20px; /* Padding */
+            background: #020408; /* Darkest black-navy base */
+            text-align: center; /* centers footer content */
+            border-top: 1px solid #1a2b45; /* Structural navy boundary */
+            background-image: var(--shield-pattern); /* Subtle pattern repeat */
+            background-size: 400px; /* Large scale footer motif */
+        }
+
+        .footer-tagline {
+            color: var(--text-muted); /* Tagline styling */
+            margin-bottom: 30px; /* separation */
+        }
+
+        .privacy-box {
+            max-width: 900px; /* Legal block scanning limit */
+            margin: 30px auto; /* Block centering */
+            font-size: 0.75rem; /* Legal scale */
+            color: #5d7fa3; /* Deep blue-tinted text */
+            text-align: center; /* Piped content alignment */
+            line-height: 1.8; /* Legal readability spacing */
+            background: rgba(0, 0, 0, 0.4); /* backdrop */
+            padding: 20px; /* spacing */
+            border-radius: 8px; /* Block style */
+        }
+
+        .footer-text {
+            margin-top: 40px; /* Vertical gap */
+            color: var(--text-muted); /* copyright style */
+            font-size: 0.85rem; /* copyright scale */
+        }
+
+        @media (max-width: 600px) {
+            .action-container {
+                flex-direction: column; /* Stacked buttons on mobile */
+                align-items: center; /* Centers stacked buttons */
+            }
+            .btn {
+                width: 80%; /* hit-area expansion */
+            }
+        }
+    </style>
+</head>
+<body>
+
+  <header>
+    <!-- Logo Video Section -->
+    <video class="main-video" autoplay loop muted playsinline>
+      <source src="assets/hero-logo.mp4" type="video/mp4">
+      Direct Consultation Strategic Partners
+    </video>
+    <p class="subtitle">Streamlining enterprise project delivery and strategic operational excellence.</p>
+    <div class="action-container">
+      <a href="mailto:info@vega7.tech" class="btn btn-primary">📩 Book Consultation</a>
+      <a href="#services" class="btn btn-outline">⚙️ PM Services</a>
+    </div>
+  </header>
+
+  <section class="services-section" id="services">
+    <h2>Strategic Management Services</h2>
+    <div class="service-grid">
+
+      <div class="card">
+        <h3>📊 PMO Establishment</h3>
+        <p>Designing and deploying Project Management Offices to standardize delivery, governance, and reporting across your organization.</p>
+        <div class="card-actions">
+          <a href="mailto:info@vega7.tech?subject=Inquiry: PMO Setup" class="card-btn">Request Quote →</a>
+          <a href="tel:+35312346060" class="btn-call">📞 Call Now</a>
+        </div>
+      </div>
+
+      <div class="card">
+        <h3>🔄 Agile Transformation</h3>
+        <p>Transitioning legacy workflows into high-velocity Scrum or Kanban environments to increase time-to-market efficiency.</p>
+        <div class="card-actions">
+          <a href="mailto:info@vega7.tech?subject=Inquiry: Agile Coaching" class="card-btn">Technical Brief →</a>
+          <a href="tel:+35312346060" class="btn-call">📞 Call Now</a>
+        </div>
+      </div>
+
+      <div class="card">
+        <h3>🏗️ Project Recovery</h3>
+        <p>Specialized intervention for distressed projects, providing rapid audit, realignment, and execution to get delivery back on track.</p>
+        <div class="card-actions">
+          <a href="mailto:info@vega7.tech?subject=Inquiry: Project Recovery" class="card-btn">Audit Inquiry →</a>
+          <a href="tel:+35312346060" class="btn-call">📞 Call Now</a>
+        </div>
+      </div>
+
+      <div class="card">
+        <h3>📉 Risk & Governance</h3>
+        <p>Implementing robust risk mitigation frameworks and compliance oversight to ensure project viability and ROI.</p>
+        <div class="card-actions">
+          <a href="mailto:info@vega7.tech?subject=Inquiry: Governance" class="card-btn">Learn More →</a>
+          <a href="tel:+35312346060" class="btn-call">📞 Call Now</a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Section blending wood texture background and illustrative proposal image -->
+  <section class="approach-section">
+    <div class="methodology-content">
+      <h2>The Direct Methodology</h2>
+      <p class="subtitle">Our foundation is built on structural integrity and rigorous analysis. We transform project chaos into corporate clarity.</p>
+      <img src="assets/proposal-visual.png" alt="Strategic Client Proposal" class="proposal-visual">
+    </div>
+  </section>
+
+  <footer>
+    <h2>Partner with Direct Consultation</h2>
+    <p class="footer-tagline">Optimizing delivery pipelines for the next wave of European enterprise.</p>
+    
+    <div class="privacy-box">
+      <p>
+        Direct Consultation operates under strict GDPR compliance | All client data and proprietary methodologies are handled with the highest industry security standards | Direct Consultation is a trade name of VEGA7 PROGRAMMING LABS LIMITED | Registered Office: 168 The Tramyard, Spa Road, Inchicore, Dublin 8, Ireland | CRO:813289 | Ph: +353 1 234 6060
+      </p>
+    </div>
+
+    <div class="footer-text">
+      <p>© 2026 VEGA7 PROGRAMMING LABS LIMITED | All Rights Reserved</p>
+    </div>
+  </footer>
+
+</body>
+</html>
