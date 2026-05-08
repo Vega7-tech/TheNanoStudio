@@ -1,106 +1,115 @@
-vega7-tech.github.io<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8"> <!-- Standard character encoding -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Mobile responsiveness -->
-    <title>Direct Consultation | Strategic Project Management</title> <!-- Tab title -->
+    <title>TheNanoStudio | Vibe Coding & Language Learning</title> <!-- Tab title -->
     <style>
-        html { scroll-behavior: smooth; } /* Enables smooth scrolling for navigation links */
+        html { scroll-behavior: smooth; } /* Enables fluid scrolling for navigation links */
 
         :root {
-            --bg-dark: #05070a; /* Primary background: Deep navy-black base */
-            --bg-card: #0c121d; /* Card background: Deep navy-saturated dark tone */
-            --brand-brown: #2d1b14; /* Brand Walnut: Rich brown from wood branding assets */
-            --brand-gold: #c5a059; /* Branding primary: Warm Metallic Gold from logo */
-            --brand-blue: #004ea8; /* Branding secondary: Vibrant Royal Blue from logo assets */
-            --text-primary: #f8fafc; /* Primary text: Crisp silver-white for contrast */
-            --text-muted: #7ea3cc; /* Muted text: Blue-tinted white for hierarchy */
-            --accent-blue: #3b82f6; /* Functional accent: Lighter blue */
-            --glow: 0 0 25px rgba(197, 160, 89, 0.3); /* Golden radiance for elevation */
+            --bg-dark: #1a0b2e; /* Primary background: Deep Creative Purple */
+            --bg-card: #2d1b4e; /* Card background: Saturated Indigo */
+            --brand-yellow: #ffde59; /* Branding primary: Sunny Yellow for energy */
+            --brand-mint: #7ef9ff; /* Branding secondary: Vibrant Mint for freshness */
+            --brand-coral: #ff6b6b; /* Accent: Creative Coral for art focus */
+            --text-primary: #ffffff; /* Primary text: High contrast white */
+            --text-muted: #b3a1d9; /* Muted text: Lavender-tinted for hierarchy */
+            --glow: 0 0 25px rgba(255, 222, 89, 0.4); /* Sunny yellow glow for buttons */
             
-            /* Shield Pattern: Inline SVG recreating the brand motif */
-            --shield-pattern: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'%3E%3Cpath d='M50 10 L80 20 L80 50 C80 70 50 90 50 90 C50 90 20 70 20 50 L20 20 L50 10 Z' fill='none' stroke='%23c5a059' stroke-width='1' stroke-opacity='0.1'/%3E%3Cpath d='M50 25 L65 30 L65 45 C65 55 50 65 50 65 C50 65 35 55 35 45 L35 30 L50 25 Z' fill='none' stroke='%23c5a059' stroke-width='0.5' stroke-opacity='0.05'/%3E%3C/svg%3E");
+            /* Creative Pattern: A playful geometric motif for a creative studio feel */
+            --creative-pattern: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='80' viewBox='0 0 80 80'%3E%3Ccircle cx='40' cy='40' r='2' fill='%23ffde59' fill-opacity='0.2'/%3E%3Crect x='10' y='10' width='4' height='4' fill='%237ef9ff' fill-opacity='0.1'/%3E%3C/svg%3E");
         }
 
         body {
-            font-family: 'Inter', 'Segoe UI', system-ui, sans-serif; /* Professional typography */
-            color: var(--text-primary); /* Sets global text color */
-            background-color: var(--bg-dark); /* Sets page background */
-            margin: 0; /* Clears margins */
-            line-height: 1.6; /* Sets readable spacing */
+            font-family: 'Inter', 'Segoe UI', system-ui, sans-serif; /* Friendly typography */
+            color: var(--text-primary); /* Global text color */
+            background-color: var(--bg-dark); /* Page background */
+            margin: 0; /* Clear margins */
+            line-height: 1.6; /* Readable spacing */
         }
 
         header {
-            padding: 100px 20px; /* Internal spacing */
+            padding: 100px 20px; /* Hero spacing */
             text-align: center; /* Centers assets */
-            background: radial-gradient(circle at center, #0e1a2b 0%, var(--bg-dark) 100%); /* Depth gradient */
-            position: relative; /* Positioning context */
+            background: radial-gradient(circle at center, #3d2b5e 0%, var(--bg-dark) 100%); /* Purple depth gradient */
+            position: relative; /* Context */
+        }
+
+        .main-logo-container {
+            margin-bottom: 30px;
+        }
+
+        .logo-img {
+            max-width: 250px;
+            height: auto;
+            border-radius: 20px;
+            box-shadow: 0 0 40px rgba(255, 222, 89, 0.3);
+            margin-bottom: 20px;
         }
 
         .main-video {
             width: 100%; /* Responsive width */
-            max-width: 700px; /* Caps visual size */
-            height: auto; /* Aspect ratio safety */
-            margin-bottom: 30px; /* Bottom spacing */
-            border-radius: 15px; /* Rounded corners */
-            box-shadow: 0 0 35px rgba(0, 78, 168, 0.25); /* Brand blue glow */
+            max-width: 700px; /* Visual limit */
+            height: auto; /* Aspect safety */
+            margin-bottom: 30px; /* Vertical gap */
+            border-radius: 20px; /* Softer rounding */
+            box-shadow: 0 0 40px rgba(126, 249, 255, 0.3); /* Mint glow for the main asset */
         }
 
         .subtitle {
-            font-size: 1.2rem; /* Subtitle scale */
-            color: var(--text-muted); /* hierarchy color */
-            max-width: 600px; /* Readability constraint */
+            font-size: 1.3rem; /* Larger scale for header text */
+            color: var(--brand-mint); /* Mint accent for the tagline */
+            max-width: 650px; /* wrap constraint */
             margin: 0 auto 40px auto; /* Centering */
+            font-weight: 500;
         }
 
         .action-container {
-            display: flex; /* Button alignment */
+            display: flex; /* Button layout */
             justify-content: center; /* Centering */
-            gap: 20px; /* Spacing */
+            gap: 20px; /* spacing */
         }
 
         .btn {
             text-decoration: none; /* Link clearing */
             padding: 14px 30px; /* Hit area */
-            border-radius: 8px; /* Rounding */
-            font-weight: 600; /* Boldness */
-            transition: 0.4s cubic-bezier(0.4, 0, 0.2, 1); /* Professional animation */
-            display: inline-block; /* Layout behavior */
+            border-radius: 50px; /* Capsule buttons */
+            font-weight: 700; /* Boldness */
+            transition: 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275); /* Bouncy animation */
+            display: inline-block; /* Layout */
         }
 
         .btn-primary {
-            background-color: var(--brand-gold); /* Brand primary color */
-            color: #05070a; /* Dark text contrast */
-            box-shadow: var(--glow); /* Depth shadow */
+            background-color: var(--brand-yellow); /* Primary action color */
+            color: #1a0b2e; /* High contrast text */
+            box-shadow: var(--glow); /* Depth */
         }
 
         .btn-outline {
-            border: 1px solid var(--brand-gold); /* Framing */
-            color: var(--brand-gold); /* Text color */
-            background: rgba(197, 160, 89, 0.05); /* Tint */
+            border: 2px solid var(--brand-mint); /* Mint boundary */
+            color: var(--brand-mint); /* Mint text */
+            background: rgba(126, 249, 255, 0.05); /* Tint */
         }
 
         .btn:hover {
-            transform: translateY(-3px); /* Hover feedback */
-            filter: brightness(1.15); /* Lightening */
-            box-shadow: 0 10px 25px rgba(197, 160, 89, 0.4); /* Glow intensification */
+            transform: scale(1.05); /* Playful scaling on hover */
+            filter: brightness(1.1); /* Brightening */
         }
 
         .services-section {
-            padding: 80px 20px; /* Section spacing */
-            max-width: 1100px; /* Layout constraint */
-            margin: 0 auto; /* Centering */
-            position: relative; /* Layering */
+            padding: 80px 20px; /* section spacing */
+            max-width: 1100px; /* layout constraint */
+            margin: 0 auto; /* horizontal centering */
         }
 
         h2 {
-            text-align: center; /* Center-aligned titles */
-            font-size: 2rem; /* Title scale */
-            margin-bottom: 50px; /* Spacing below title */
-            color: var(--brand-gold); /* Brand gold */
-            text-transform: uppercase; /* Formal caps */
-            letter-spacing: 3px; /* Professional tracking */
-            text-shadow: 0 2px 4px rgba(0,0,0,0.5); /* Visibility protection */
+            text-align: center; /* Center titles */
+            font-size: 2.2rem; /* Title scale */
+            margin-bottom: 50px; /* bottom spacing */
+            color: var(--brand-yellow); /* Yellow titles */
+            text-transform: capitalize; /* Approachable capitalization */
+            letter-spacing: 1px; /* Normal tracking */
         }
 
         .service-grid {
@@ -110,134 +119,131 @@ vega7-tech.github.io<!DOCTYPE html>
         }
 
         .card {
-            background: var(--bg-card); /* Navy-dark cards */
+            background: var(--bg-card); /* Purple cards */
             padding: 40px; /* Padding */
-            border-radius: 12px; /* Rounding */
-            border: 1px solid #1a2b45; /* Structural boundary */
-            transition: 0.3s; /* Transition speed */
+            border-radius: 20px; /* Soft rounding */
+            border: 2px solid transparent; /* default state */
+            transition: 0.3s ease; /* Transition speed */
             display: flex; /* Internal layout */
             flex-direction: column; /* Stacking */
         }
 
         .card:hover {
-            border-color: var(--brand-gold); /* Hover gold boundary */
-            background: #101929; /* Hover navy saturation */
-            box-shadow: 0 10px 30px -10px rgba(0,0,0,0.8); /* Depth shadow */
+            border-color: var(--brand-mint); /* Mint boundary on hover */
+            transform: translateY(-10px); /* Lift feedback */
+            box-shadow: 0 15px 35px rgba(0,0,0,0.4); /* depth shadow */
         }
 
         .card h3 {
-            color: white; /* Header visibility */
+            color: var(--brand-mint); /* Title color */
             margin-bottom: 15px; /* Spacing */
+            font-size: 1.5rem;
         }
 
         .card p {
-            color: var(--text-muted); /* Muted description */
-            font-size: 0.95rem; /* Standard scale */
-            flex-grow: 1; /* Aligns buttons */
+            color: var(--text-primary); /* Readable text */
+            font-size: 1rem; /* standard scale */
+            flex-grow: 1; /* button alignment */
         }
 
         .card-actions {
             margin-top: 20px; /* Action gutter */
             display: flex; /* Layout */
             flex-direction: column; /* Vertical actions */
-            gap: 12px; /* Action gutters */
+            gap: 12px; /* Gutters */
         }
 
         .card-btn {
-            color: var(--brand-gold); /* Gold links */
+            color: var(--brand-yellow); /* Yellow links */
             text-decoration: none; /* clearing */
             font-weight: bold; /* Boldness */
-            font-size: 0.9rem; /* Link scale */
-            transition: 0.2s; /* Speed */
-        }
-
-        .card-btn:hover {
-            filter: brightness(1.2); /* Hover brightening */
-        }
-
-        .btn-call {
-            background-color: var(--brand-blue); /* Royal Blue for calls */
-            color: white; /* Visibility */
-            padding: 10px 20px; /* hit area */
-            border-radius: 6px; /* rounding */
-            text-align: center; /* alignment */
-            font-size: 0.85rem; /* scale */
-            text-decoration: none; /* decoration clearing */
-            font-weight: 600; /* Medium-bold */
+            font-size: 0.95rem; /* Link scale */
             transition: 0.2s; /* speed */
         }
 
+        .btn-call {
+            background-color: var(--brand-coral); /* Coral for calls */
+            color: white; /* visibility */
+            padding: 12px 20px; /* Hit area */
+            border-radius: 10px; /* rounding */
+            text-align: center; /* alignment */
+            font-size: 0.9rem; /* scale */
+            text-decoration: none; /* clearing */
+            font-weight: 700; /* Emphasis */
+            transition: 0.2s; /* Speed */
+        }
+
         .btn-call:hover {
-            background-color: #0056b3; /* Hover shift */
+            background-color: #ff4f4f; /* Hover shift */
         }
 
         .approach-section {
-            /* Hybrid background: Brown Overlay + Pattern SVG + Wood Backdrop */
             background: 
-                linear-gradient(rgba(45, 27, 20, 0.92), rgba(45, 27, 20, 0.92)), 
-                var(--shield-pattern), 
+                linear-gradient(rgba(26, 11, 46, 0.9), rgba(26, 11, 46, 0.9)), 
+                var(--creative-pattern), 
                 url('assets/wood-pattern.png');
-            background-size: auto, 300px, cover; /* Motif scaling */
-            background-attachment: scroll, scroll, fixed; /* Parallax effect */
-            padding: 100px 20px; /* vertical section separation */
-            text-align: center; /* Content alignment */
-            border-top: 1px solid var(--brand-gold); /* boundary separator */
-            border-bottom: 1px solid var(--brand-gold); /* boundary separator */
+            background-size: auto, 100px, cover; /* pattern scaling */
+            background-attachment: scroll, scroll, fixed; /* parallax */
+            padding: 100px 20px; /* vertical spacing */
+            text-align: center; /* alignment */
+            border-top: 4px solid var(--brand-yellow); /* Yellow border */
+            border-bottom: 4px solid var(--brand-yellow); /* Yellow border */
         }
 
         .methodology-content {
-            max-width: 800px; /* Professional copy constraint */
-            margin: 0 auto; /* Horizontal centering */
+            max-width: 800px; /* readability constraint */
+            margin: 0 auto; /* Centering */
         }
 
         .proposal-visual {
             width: 100%; /* Responsive scaling */
-            max-width: 500px; /* Limit */
-            border-radius: 12px; /* Corner style */
-            margin-top: 50px; /* top spacing */
-            box-shadow: 0 25px 50px rgba(0,0,0,0.8); /* Depth shadow */
-            border: 1px solid rgba(197, 160, 89, 0.2); /* rim framing */
+            max-width: 500px; /* visual limit */
+            border-radius: 20px; /* Soft rounding */
+            margin-top: 50px; /* spacing */
+            box-shadow: 0 25px 50px rgba(0,0,0,0.5); /* depth */
+            border: 4px solid var(--brand-mint); /* framing */
         }
 
         footer {
-            padding: 80px 20px; /* Padding */
-            background: #020408; /* Darkest black-navy base */
-            text-align: center; /* centers footer content */
-            border-top: 1px solid #1a2b45; /* Structural navy boundary */
-            background-image: var(--shield-pattern); /* Subtle pattern repeat */
-            background-size: 400px; /* Large scale footer motif */
+            padding: 80px 20px; /* footer padding */
+            background: #0d0517; /* darkest purple base */
+            text-align: center; /* centering */
+            border-top: 1px solid #2d1b4e; /* Structural boundary */
+            background-image: var(--creative-pattern); /* subtle pattern */
+            background-size: 200px; /* motif scale */
         }
 
         .footer-tagline {
-            color: var(--text-muted); /* Tagline styling */
+            color: var(--brand-mint); /* tagline styling */
             margin-bottom: 30px; /* separation */
+            font-weight: 600;
         }
 
         .privacy-box {
-            max-width: 900px; /* Legal block scanning limit */
-            margin: 30px auto; /* Block centering */
-            font-size: 0.75rem; /* Legal scale */
-            color: #5d7fa3; /* Deep blue-tinted text */
-            text-align: center; /* Piped content alignment */
-            line-height: 1.8; /* Legal readability spacing */
-            background: rgba(0, 0, 0, 0.4); /* backdrop */
-            padding: 20px; /* spacing */
-            border-radius: 8px; /* Block style */
+            max-width: 900px; /* scanning limit */
+            margin: 30px auto; /* centering */
+            font-size: 0.8rem; /* legal scale */
+            color: var(--text-muted); /* muted hierarchy */
+            text-align: center; /* alignment */
+            line-height: 1.8; /* spacing */
+            background: rgba(0, 0, 0, 0.3); /* backdrop */
+            padding: 20px; /* padding */
+            border-radius: 15px; /* block rounding */
         }
 
         .footer-text {
             margin-top: 40px; /* Vertical gap */
-            color: var(--text-muted); /* copyright style */
-            font-size: 0.85rem; /* copyright scale */
+            color: var(--text-muted); /* copyright styling */
+            font-size: 0.9rem; /* scale */
         }
 
         @media (max-width: 600px) {
             .action-container {
-                flex-direction: column; /* Stacked buttons on mobile */
-                align-items: center; /* Centers stacked buttons */
+                flex-direction: column; /* stacked on mobile */
+                align-items: center; /* centering */
             }
             .btn {
-                width: 80%; /* hit-area expansion */
+                width: 80%; /* hit area */
             }
         }
     </style>
@@ -245,77 +251,85 @@ vega7-tech.github.io<!DOCTYPE html>
 <body>
 
   <header>
-    <!-- Logo Video Section -->
+    <div class="main-logo-container">
+      <img src="assets/thenanostudio-logo.png" alt="TheNanoStudio Logo" class="logo-img" onerror="this.src='https://via.placeholder.com/250x150?text=TheNanoStudio+Logo'">
+    </div>
+    
     <video class="main-video" autoplay loop muted playsinline>
       <source src="assets/hero-logo.mp4" type="video/mp4">
-      Direct Consultation Strategic Partners
+      TheNanoStudio Creative Hub
     </video>
-    <p class="subtitle">Streamlining enterprise project delivery and strategic operational excellence.</p>
+    
+    <p class="subtitle">Elevating minds through Vibe Coding and immersive Language classes for kids and adults.</p>
     <div class="action-container">
-      <a href="mailto:info@vega7.tech" class="btn btn-primary">📩 Book Consultation</a>
-      <a href="#services" class="btn btn-outline">⚙️ PM Services</a>
+      <a href="mailto:info@vega7.tech" class="btn btn-primary">🎨 Start Learning</a>
+      <a href="#classes" class="btn btn-outline">📚 Class Schedule</a>
     </div>
   </header>
 
-  <section class="services-section" id="services">
-    <h2>Strategic Management Services</h2>
+  <section class="services-section" id="classes">
+    <h2>Our Learning Tracks</h2>
     <div class="service-grid">
 
+      <!-- Vibe Coding Section -->
       <div class="card">
-        <h3>📊 PMO Establishment</h3>
-        <p>Designing and deploying Project Management Offices to standardize delivery, governance, and reporting across your organization.</p>
+        <h3>Vibe ✨ Coding</h3>
+        <p>Go beyond syntax. Learn to build modern, aesthetic digital experiences using the latest "vibe" tech. Perfect for creative thinkers wanting to master the art of code.</p>
         <div class="card-actions">
-          <a href="mailto:info@vega7.tech?subject=Inquiry: PMO Setup" class="card-btn">Request Quote →</a>
-          <a href="tel:+35312346060" class="btn-call">📞 Call Now</a>
+          <a href="mailto:info@vega7.tech?subject=Enroll: Vibe Coding" class="card-btn">Enroll Today →</a>
+          <a href="tel:+35312346060" class="btn-call">📞 Join Now</a>
         </div>
       </div>
 
+      <!-- Spanish Language Section -->
       <div class="card">
-        <h3>🔄 Agile Transformation</h3>
-        <p>Transitioning legacy workflows into high-velocity Scrum or Kanban environments to increase time-to-market efficiency.</p>
+        <h3>Spanish 🇪🇸 Language</h3>
+        <p>Immerse yourself in Spanish culture and language. From foundational grammar to conversational mastery, our classes make learning fun and effective.</p>
         <div class="card-actions">
-          <a href="mailto:info@vega7.tech?subject=Inquiry: Agile Coaching" class="card-btn">Technical Brief →</a>
-          <a href="tel:+35312346060" class="btn-call">📞 Call Now</a>
+          <a href="mailto:info@vega7.tech?subject=Enroll: Spanish" class="card-btn">Class Details →</a>
+          <a href="tel:+35312346060" class="btn-call">📞 Join Now</a>
         </div>
       </div>
 
+      <!-- English Language Section -->
       <div class="card">
-        <h3>🏗️ Project Recovery</h3>
-        <p>Specialized intervention for distressed projects, providing rapid audit, realignment, and execution to get delivery back on track.</p>
+        <h3>English 🇬🇧 Language</h3>
+        <p>Unlock global opportunities with our comprehensive English courses. Focus on business English, academic preparation, or everyday fluency.</p>
         <div class="card-actions">
-          <a href="mailto:info@vega7.tech?subject=Inquiry: Project Recovery" class="card-btn">Audit Inquiry →</a>
-          <a href="tel:+35312346060" class="btn-call">📞 Call Now</a>
+          <a href="mailto:info@vega7.tech?subject=Enroll: English" class="card-btn">Academic Brief →</a>
+          <a href="tel:+35312346060" class="btn-call">📞 Join Now</a>
         </div>
       </div>
 
+      <!-- Polish Language Section -->
       <div class="card">
-        <h3>📉 Risk & Governance</h3>
-        <p>Implementing robust risk mitigation frameworks and compliance oversight to ensure project viability and ROI.</p>
+        <h3>Polish 🇵🇱 Language</h3>
+        <p>Connect with Polish heritage and language. Tailored classes for beginners and those looking to refine their speaking and writing skills.</p>
         <div class="card-actions">
-          <a href="mailto:info@vega7.tech?subject=Inquiry: Governance" class="card-btn">Learn More →</a>
-          <a href="tel:+35312346060" class="btn-call">📞 Call Now</a>
+          <a href="mailto:info@vega7.tech?subject=Enroll: Polish" class="card-btn">Tutoring Info →</a>
+          <a href="tel:+35312346060" class="btn-call">📞 Join Now</a>
         </div>
       </div>
 
     </div>
   </section>
 
-  <!-- Section blending wood texture background and illustrative proposal image -->
+  <!-- The Process Section -->
   <section class="approach-section">
     <div class="methodology-content">
-      <h2>The Direct Methodology</h2>
-      <p class="subtitle">Our foundation is built on structural integrity and rigorous analysis. We transform project chaos into corporate clarity.</p>
-      <img src="assets/proposal-visual.png" alt="Strategic Client Proposal" class="proposal-visual">
+      <h2>The Nano Method</h2>
+      <p class="subtitle">Education shouldn't be boring. We combine technical rigor with artistic flair to help you master new skills with a smile.</p>
+      <img src="assets/proposal-visual.png" alt="Creative Study Roadmap" class="proposal-visual">
     </div>
   </section>
 
   <footer>
-    <h2>Partner with Direct Consultation</h2>
-    <p class="footer-tagline">Optimizing delivery pipelines for the next wave of European enterprise.</p>
+    <h2>Welcome to TheNanoStudio</h2>
+    <p class="footer-tagline">Empowering learners with creativity and technical mastery.</p>
     
     <div class="privacy-box">
       <p>
-        Direct Consultation operates under strict GDPR compliance | All client data and proprietary methodologies are handled with the highest industry security standards | Direct Consultation is a trade name of VEGA7 PROGRAMMING LABS LIMITED | Registered Office: 168 The Tramyard, Spa Road, Inchicore, Dublin 8, Ireland | CRO:813289 | Ph: +353 1 234 6060
+        TheNanoStudio operates under strict GDPR compliance | All learner data and proprietary materials are protected with enterprise-grade security | TheNanoStudio is a trade name of VEGA7 PROGRAMMING LABS LIMITED | Registered Office: 168 The Tramyard, Spa Road, Inchicore, Dublin 8, Ireland | CRO:813289 | Ph: +353 1 234 6060
       </p>
     </div>
 
